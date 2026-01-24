@@ -91,7 +91,7 @@ Build a static website (HTML, CSS, JavaScript – Mobile & Desktop Responsive) f
    - Service area information
 
 ### ✅ Components Created
-1. **Logo** - Professional logo with sun and leaf icons, company name
+1. **Logo** - Professional 3D logo image provided by client (solar panels, sun, farm fields)
 2. **Navbar** - Fixed header with logo and responsive mobile menu
 3. **Footer** - Company info with logo, quick links, services, contact
 4. **WhatsAppButton** - Floating WhatsApp button (fixed bottom-right)

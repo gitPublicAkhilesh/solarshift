@@ -211,7 +211,7 @@ const Contact = () => {
           <h2 className="heading-2 text-center mb-3">Find Us</h2>
           <div className="map-container">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.5!2d83.3730!3d26.7606!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjbCsDQ1JzM4LjIiTiA4M8KwMjInMjIuOCJF!5e0!3m2!1sen!2sin!4v1234567890"
+              src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3559.5823456789!2d83.4212083!3d26.7567787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjbCsDQ1JzI0LjQiTiA4M8KwMjUnMTYuNCJF!5e0!3m2!1sen!2sin!4v1234567890"
               width="100%"
               height="450"
               style={{ border: 0, borderRadius: '12px' }}
@@ -223,6 +223,9 @@ const Contact = () => {
             <div className="map-address-note">
               <p className="body-small">
                 <strong>Address:</strong> Police Chowki Jharna Tola, Nena Thapa Road, Near Jai Mata Di Marriage Hall, Gorakhpur, UP - 273008
+              </p>
+              <p className="body-small">
+                <strong>Coordinates:</strong> 26.7567787, 83.4212083
               </p>
             </div>
           </div>
