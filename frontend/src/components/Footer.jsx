@@ -46,9 +46,9 @@ const Footer = () => {
           <div className="footer-section">
             <h4 className="footer-subheading">Contact Us</h4>
             <div className="footer-contact">
-              <a href="tel:+919990611520" className="contact-item">
+              <a href="tel:+918591411591" className="contact-item">
                 <Phone size={18} />
-                <span>+91 9990611520</span>
+                <span>+91 8591411591</span>
               </a>
               <a href="mailto:azure.akhielsh@gmail.com" className="contact-item">
                 <Mail size={18} />

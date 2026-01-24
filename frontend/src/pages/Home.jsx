@@ -57,7 +57,7 @@ const Home = () => {
               <Zap size={20} />
               Get Free Site Survey
             </Link>
-            <a href="tel:+919990611520" className="btn-secondary">
+            <a href="tel:+918591411591" className="btn-secondary">
               <Phone size={20} />
               Call Now
             </a>
@@ -131,7 +131,7 @@ const Home = () => {
             </p>
             <div className="cta-buttons">
               <a 
-                href="https://wa.me/919990611520?text=Hello!%20I%20am%20interested%20in%20solar%20panel%20installation." 
+                href="https://wa.me/918591411591?text=Hello!%20I%20am%20interested%20in%20solar%20panel%20installation." 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary"
@@ -139,9 +139,9 @@ const Home = () => {
                 <MessageCircle size={20} />
                 WhatsApp Us
               </a>
-              <a href="tel:+919990611520" className="btn-secondary btn-secondary-white">
+              <a href="tel:+918591411591" className="btn-secondary btn-secondary-white">
                 <Phone size={20} />
-                Call: 9990611520
+                Call: 8591411591
               </a>
             </div>
           </div>

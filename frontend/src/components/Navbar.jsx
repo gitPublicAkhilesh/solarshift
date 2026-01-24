@@ -38,7 +38,7 @@ const Navbar = () => {
         </div>
 
         {/* Call Button */}
-        <a href="tel:+919990611520" className="btn-primary nav-cta-desktop">
+        <a href="tel:+918591411591" className="btn-primary nav-cta-desktop">
           <Phone size={18} />
           Call Now
         </a>
@@ -66,7 +66,7 @@ const Navbar = () => {
               {link.label}
             </Link>
           ))}
-          <a href="tel:+919990611520" className="btn-primary" style={{ width: '100%' }}>
+          <a href="tel:+918591411591" className="btn-primary" style={{ width: '100%' }}>
             <Phone size={18} />
             Call Now
           </a>

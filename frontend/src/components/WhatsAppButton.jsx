@@ -4,7 +4,7 @@ import './WhatsAppButton.css';
 
 const WhatsAppButton = () => {
   const handleWhatsAppClick = () => {
-    const phoneNumber = '919990611520';
+    const phoneNumber = '918591411591';
     const message = encodeURIComponent('Hello! I am interested in solar panel installation.');
     window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
   };

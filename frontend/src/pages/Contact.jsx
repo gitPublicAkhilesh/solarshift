@@ -72,17 +72,17 @@ const Contact = () => {
               </p>
 
               <div className="contact-methods">
-                <a href="tel:+919990611520" className="contact-method">
+                <a href="tel:+918591411591" className="contact-method">
                   <div className="method-icon">
                     <Phone size={24} />
                   </div>
                   <div className="method-content">
                     <h4 className="body-small">Phone</h4>
-                    <p className="body-medium">+91 9990611520</p>
+                    <p className="body-medium">+91 8591411591</p>
                   </div>
                 </a>
 
-                <a href="https://wa.me/919990611520" target="_blank" rel="noopener noreferrer" className="contact-method">
+                <a href="https://wa.me/918591411591" target="_blank" rel="noopener noreferrer" className="contact-method">
                   <div className="method-icon whatsapp">
                     <MessageCircle size={24} />
                   </div>
