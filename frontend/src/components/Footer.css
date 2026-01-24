@@ -18,12 +18,8 @@
   gap: 1rem;
 }
 
-.footer-heading {
-  font-family: system-ui, sans-serif;
-  font-weight: 700;
-  font-size: 1.25rem;
-  color: var(--text-primary);
-  margin-bottom: 0.5rem;
+.footer-section .logo-container {
+  margin-bottom: 1rem;
 }
 
 .footer-subheading {

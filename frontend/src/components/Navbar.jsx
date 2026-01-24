@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Phone } from 'lucide-react';
+import Logo from './Logo';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -21,9 +22,7 @@ const Navbar = () => {
   return (
     <nav className="nav-header">
       <div className="nav-content">
-        <Link to="/" className="nav-logo">
-          <span className="logo-text">Agri Solar Solution</span>
-        </Link>
+        <Logo size="medium" showText={true} />
 
         {/* Desktop Navigation */}
         <div className="nav-links-desktop">

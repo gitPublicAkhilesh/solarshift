@@ -21,20 +21,7 @@
   height: 64px;
 }
 
-.nav-logo {
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.logo-text {
-  font-family: system-ui, sans-serif;
-  font-weight: 700;
-  font-size: 1.25rem;
-  color: var(--text-primary);
-  letter-spacing: -0.01em;
-}
+/* Logo styling handled by Logo component */
 
 .nav-links-desktop {
   display: none;

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin } from 'lucide-react';
+import Logo from './Logo';
 import './Footer.css';
 
 const Footer = () => {
@@ -10,7 +11,7 @@ const Footer = () => {
         <div className="footer-grid">
           {/* Company Info */}
           <div className="footer-section">
-            <h3 className="footer-heading">Agri Solar Solution</h3>
+            <Logo size="medium" showText={true} />
             <p className="footer-text">
               Affordable solar panel installation for rural & urban India. 
               Empowering communities with clean, reliable energy.

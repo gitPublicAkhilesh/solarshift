@@ -1,0 +1,99 @@
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.logo-container:hover {
+  transform: scale(1.02);
+}
+
+/* Logo Icon Wrapper */
+.logo-icon-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--gradient-button);
+  border-radius: 12px;
+  padding: 8px;
+  box-shadow: 0 2px 8px rgba(143, 236, 120, 0.3);
+}
+
+.logo-sun {
+  color: white;
+  position: relative;
+  z-index: 2;
+}
+
+.logo-leaf {
+  color: rgba(255, 255, 255, 0.9);
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+  z-index: 3;
+}
+
+/* Logo Text */
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  line-height: 1;
+}
+
+.logo-company-name {
+  font-family: system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+
+.logo-tagline {
+  font-family: system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 0.875rem;
+  color: var(--accent-text);
+  letter-spacing: 0.02em;
+}
+
+/* Size Variations */
+.logo-large .logo-icon-wrapper {
+  padding: 12px;
+  border-radius: 16px;
+}
+
+.logo-large .logo-company-name {
+  font-size: 1.75rem;
+}
+
+.logo-large .logo-tagline {
+  font-size: 1rem;
+}
+
+.logo-small .logo-icon-wrapper {
+  padding: 6px;
+  border-radius: 8px;
+}
+
+.logo-small .logo-company-name {
+  font-size: 1rem;
+}
+
+.logo-small .logo-tagline {
+  font-size: 0.75rem;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+  .logo-company-name {
+    font-size: 1.125rem;
+  }
+
+  .logo-tagline {
+    font-size: 0.8rem;
+  }
+}
