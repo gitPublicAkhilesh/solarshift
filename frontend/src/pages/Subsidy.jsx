@@ -4,8 +4,9 @@ import './Subsidy.css';
 
 const Subsidy = () => {
   const subsidyInfo = [
-    { capacity: '1-3 kW', subsidy: '₹18,000 per kW', total: 'Up to ₹54,000' },
-    { capacity: '4-10 kW', subsidy: '₹18,000 for first 3kW, ₹9,000 for rest', total: 'Up to ₹1,17,000' }
+    { capacity: '1 kW', centerSubsidy: '₹30,000', stateSubsidy: '₹15,000', total: '₹45,000' },
+    { capacity: '2 kW', centerSubsidy: '₹60,000', stateSubsidy: '₹30,000', total: '₹90,000' },
+    { capacity: '3 kW and above', centerSubsidy: '₹78,000', stateSubsidy: '₹30,000', total: '₹1,08,000' }
   ];
 
   const benefits = [
@@ -60,15 +61,17 @@ const Subsidy = () => {
               <thead>
                 <tr>
                   <th>System Capacity</th>
-                  <th>Subsidy Rate</th>
-                  <th>Maximum Benefit</th>
+                  <th>Central Government Subsidy</th>
+                  <th>State Government Subsidy</th>
+                  <th>Total Subsidy</th>
                 </tr>
               </thead>
               <tbody>
                 {subsidyInfo.map((item, index) => (
                   <tr key={index}>
-                    <td>{item.capacity}</td>
-                    <td>{item.subsidy}</td>
+                    <td><strong>{item.capacity}</strong></td>
+                    <td>{item.centerSubsidy}</td>
+                    <td>{item.stateSubsidy}</td>
                     <td className="highlight">{item.total}</td>
                   </tr>
                 ))}
