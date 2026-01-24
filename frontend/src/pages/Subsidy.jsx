@@ -6,7 +6,8 @@ const Subsidy = () => {
   const subsidyInfo = [
     { capacity: '1 kW', centerSubsidy: '₹30,000', stateSubsidy: '₹15,000', total: '₹45,000' },
     { capacity: '2 kW', centerSubsidy: '₹60,000', stateSubsidy: '₹30,000', total: '₹90,000' },
-    { capacity: '3 kW and above', centerSubsidy: '₹78,000', stateSubsidy: '₹30,000', total: '₹1,08,000' }
+    { capacity: '3 kW', centerSubsidy: '₹78,000', stateSubsidy: '₹30,000', total: '₹1,08,000' },
+    { capacity: 'Above 3 kW', centerSubsidy: '₹78,000', stateSubsidy: '₹30,000', total: '₹1,08,000' }
   ];
 
   const benefits = [
