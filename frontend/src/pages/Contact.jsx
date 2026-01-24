@@ -224,9 +224,6 @@ const Contact = () => {
               <p className="body-small">
                 <strong>Address:</strong> Police Chowki Jharna Tola, Nena Thapa Road, Near Jai Mata Di Marriage Hall, Gorakhpur, UP - 273008
               </p>
-              <p className="body-small">
-                <strong>Coordinates:</strong> 26.7567787, 83.4212083
-              </p>
             </div>
           </div>
         </div>
