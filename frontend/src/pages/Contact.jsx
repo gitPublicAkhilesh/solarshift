@@ -92,13 +92,13 @@ const Contact = () => {
                   </div>
                 </a>
 
-                <a href="mailto:azure.akhielsh@gmail.com" className="contact-method">
+                <a href="mailto:agrisolarsolution.in@gmail.com" className="contact-method">
                   <div className="method-icon">
                     <Mail size={24} />
                   </div>
                   <div className="method-content">
                     <h4 className="body-small">Email</h4>
-                    <p className="body-medium">azure.akhielsh@gmail.com</p>
+                    <p className="body-medium">agrisolarsolution.in@gmail.com</p>
                   </div>
                 </a>
 

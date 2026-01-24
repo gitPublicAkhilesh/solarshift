@@ -50,9 +50,9 @@ const Footer = () => {
                 <Phone size={18} />
                 <span>+91 8591411591</span>
               </a>
-              <a href="mailto:azure.akhielsh@gmail.com" className="contact-item">
+              <a href="mailto:agrisolarsolution.in@gmail.com" className="contact-item">
                 <Mail size={18} />
-                <span>azure.akhielsh@gmail.com</span>
+                <span>agrisolarsolution.in@gmail.com</span>
               </a>
               <div className="contact-item">
                 <MapPin size={18} />

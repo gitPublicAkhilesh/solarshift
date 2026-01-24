@@ -11,7 +11,7 @@ Build a static website (HTML, CSS, JavaScript – Mobile & Desktop Responsive) f
 ## Company Details
 - **Name:** Agri Solar Solution
 - **Phone/WhatsApp:** +91 8591411591
-- **Email:** azure.akhielsh@gmail.com
+- **Email:** agrisolarsolution.in@gmail.com
 - **Location:** City Mall, Gorakhpur, Uttar Pradesh
 - **Service Area:** Gorakhpur and surrounding areas (50KM radius)
 
