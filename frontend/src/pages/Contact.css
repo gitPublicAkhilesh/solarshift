@@ -190,6 +190,22 @@
   overflow: hidden;
 }
 
+.map-address-note {
+  background: var(--bg-card);
+  padding: 1rem 1.5rem;
+  border-top: 1px solid var(--border-light);
+}
+
+.map-address-note p {
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+.map-address-note strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
 @media (max-width: 767px) {
   .contact-hero {
     padding: 4rem 1rem 3rem;

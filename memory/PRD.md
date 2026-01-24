@@ -12,7 +12,7 @@ Build a static website (HTML, CSS, JavaScript – Mobile & Desktop Responsive) f
 - **Name:** Agri Solar Solution
 - **Phone/WhatsApp:** +91 8591411591
 - **Email:** agrisolarsolution.in@gmail.com
-- **Location:** City Mall, Gorakhpur, Uttar Pradesh
+- **Location:** Police Chowki Jharna Tola, Nena Thapa Road, Near Jai Mata Di Marriage Hall, Gorakhpur, Uttar Pradesh - 273008
 - **Service Area:** Gorakhpur and surrounding areas (50KM radius)
 
 ## User Personas

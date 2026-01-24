@@ -108,7 +108,7 @@ const Contact = () => {
                   </div>
                   <div className="method-content">
                     <h4 className="body-small">Address</h4>
-                    <p className="body-medium">City Mall, Gorakhpur, Uttar Pradesh</p>
+                    <p className="body-medium">Police Chowki Jharna Tola, Nena Thapa Road, Near Jai Mata Di Marriage Hall, Gorakhpur, Uttar Pradesh - 273008</p>
                   </div>
                 </div>
               </div>
@@ -211,15 +211,20 @@ const Contact = () => {
           <h2 className="heading-2 text-center mb-3">Find Us</h2>
           <div className="map-container">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.5823456789!2d83.3730!3d26.7606!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3991446a0c79623d%3A0x5!2sCity%20Mall%20Gorakhpur!5e0!3m2!1sen!2sin!4v1234567890"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.5!2d83.3730!3d26.7606!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjbCsDQ1JzM4LjIiTiA4M8KwMjInMjIuOCJF!5e0!3m2!1sen!2sin!4v1234567890"
               width="100%"
               height="450"
               style={{ border: 0, borderRadius: '12px' }}
               allowFullScreen=""
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Agri Solar Solution Location"
+              title="Agri Solar Solution - Police Chowki Jharna Tola, Nena Thapa Road, Gorakhpur"
             />
+            <div className="map-address-note">
+              <p className="body-small">
+                <strong>Address:</strong> Police Chowki Jharna Tola, Nena Thapa Road, Near Jai Mata Di Marriage Hall, Gorakhpur, UP - 273008
+              </p>
+            </div>
           </div>
         </div>
       </section>

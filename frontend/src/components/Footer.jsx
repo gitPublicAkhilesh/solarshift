@@ -56,7 +56,7 @@ const Footer = () => {
               </a>
               <div className="contact-item">
                 <MapPin size={18} />
-                <span>City Mall, Gorakhpur, UP</span>
+                <span>Police Chowki Jharna Tola, Nena Thapa Road, Near Jai Mata Di Marriage Hall, Gorakhpur, UP - 273008</span>
               </div>
             </div>
           </div>
