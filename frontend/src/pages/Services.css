@@ -1,0 +1,140 @@
+.services-page {
+  padding-top: 64px;
+}
+
+.services-hero {
+  background: var(--gradient-hero);
+  padding: 5rem 1.5rem 4rem;
+  text-align: center;
+}
+
+.services-hero .heading-1 {
+  margin-bottom: 1.5rem;
+}
+
+.services-hero .body-large {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Service Detail Cards */
+.service-detail {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  margin-bottom: 4rem;
+  padding: 2rem 0;
+}
+
+.service-detail.reverse {
+  grid-template-columns: 1fr 1fr;
+}
+
+.service-detail.reverse .service-detail-image {
+  order: 2;
+}
+
+.service-detail-image {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  height: 400px;
+}
+
+.service-detail-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.service-detail:hover .service-detail-image img {
+  transform: scale(1.05);
+}
+
+.service-detail-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.service-icon {
+  color: var(--accent-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent-wash);
+  width: 72px;
+  height: 72px;
+  border-radius: 12px;
+}
+
+.service-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.feature-icon {
+  color: var(--accent-text);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* CTA Section */
+.services-cta {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.services-cta .heading-2 {
+  margin-bottom: 1rem;
+}
+
+.services-cta .body-large {
+  margin-bottom: 2rem;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+@media (max-width: 767px) {
+  .services-hero {
+    padding: 4rem 1rem 3rem;
+  }
+
+  .service-detail,
+  .service-detail.reverse {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .service-detail.reverse .service-detail-image {
+    order: 0;
+  }
+
+  .service-detail-image {
+    height: 250px;
+  }
+
+  .service-icon {
+    width: 56px;
+    height: 56px;
+  }
+}
