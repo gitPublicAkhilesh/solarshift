@@ -1,44 +1,48 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, MessageCircle, Zap, Shield, TrendingDown, Sun, CheckCircle, Award, Users, Leaf } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
+import { t } from '../translations';
 import './Home.css';
 
 const Home = () => {
+  const { language } = useLanguage();
+
   const benefits = [
-    { icon: <TrendingDown size={32} />, title: 'Save up to 90%', description: 'Reduce electricity bills dramatically' },
-    { icon: <Shield size={32} />, title: 'Low Maintenance', description: 'Minimal upkeep, maximum efficiency' },
-    { icon: <Sun size={32} />, title: '25+ Years Life', description: 'Long-lasting, reliable panels' },
-    { icon: <Leaf size={32} />, title: 'Eco-Friendly', description: 'Clean, renewable energy' }
+    { icon: <TrendingDown size={32} />, title: t(language, 'home.save90'), description: t(language, 'home.save90Desc') },
+    { icon: <Shield size={32} />, title: t(language, 'home.lowMaintenance'), description: t(language, 'home.lowMaintenanceDesc') },
+    { icon: <Sun size={32} />, title: t(language, 'home.longLife'), description: t(language, 'home.longLifeDesc') },
+    { icon: <Leaf size={32} />, title: t(language, 'home.ecoFriendly'), description: t(language, 'home.ecoFriendlyDesc') }
   ];
 
   const services = [
     {
-      title: 'Residential Solar',
-      description: 'Rooftop solar panels for homes and apartments with government subsidy support',
+      title: t(language, 'services.residential'),
+      description: t(language, 'services.residentialDesc'),
       image: 'https://images.unsplash.com/photo-1691421740425-48ff22b6d442?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTN8MHwxfHNlYXJjaHwyfHxyb29mdG9wJTIwc29sYXJ8ZW58MHx8fHwxNzY5Mjc2MDg1fDA&ixlib=rb-4.1.0&q=85'
     },
     {
-      title: 'Commercial Solar',
-      description: 'High-capacity systems for offices, factories, and schools',
+      title: t(language, 'services.commercial'),
+      description: t(language, 'services.commercialDesc'),
       image: 'https://images.unsplash.com/photo-1617269778723-73a40cf299bd?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTN8MHwxfHNlYXJjaHwzfHxyb29mdG9wJTIwc29sYXJ8ZW58MHx8fHwxNzY5Mjc2MDg1fDA&ixlib=rb-4.1.0&q=85'
     },
     {
-      title: 'Rural Solar Systems',
-      description: 'Off-grid solutions for villages, farms, and rural areas',
+      title: t(language, 'services.rural'),
+      description: t(language, 'services.ruralDesc'),
       image: 'https://images.unsplash.com/photo-1509391366360-2e959784a276?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NjZ8MHwxfHNlYXJjaHwyfHxzb2xhciUyMHBhbmVsc3xlbnwwfHx8fDE3NjkyNzYwNzl8MA&ixlib=rb-4.1.0&q=85'
     },
     {
-      title: 'Maintenance & AMC',
-      description: 'Annual maintenance contracts, panel cleaning, and inverter checkups',
+      title: t(language, 'services.maintenance'),
+      description: t(language, 'services.maintenanceDesc'),
       image: 'https://images.pexels.com/photos/8853502/pexels-photo-8853502.jpeg'
     }
   ];
 
   const whyChooseUs = [
-    { icon: <Award size={24} />, text: 'Certified Solar Experts' },
-    { icon: <TrendingDown size={24} />, text: 'Affordable Pricing' },
-    { icon: <CheckCircle size={24} />, text: 'Government Subsidy Support' },
-    { icon: <Users size={24} />, text: 'Installation in Villages & Cities' }
+    { icon: <Award size={24} />, text: t(language, 'home.certified') },
+    { icon: <TrendingDown size={24} />, text: t(language, 'home.affordable') },
+    { icon: <CheckCircle size={24} />, text: t(language, 'home.subsidy') },
+    { icon: <Users size={24} />, text: t(language, 'home.installation') }
   ];
 
   return (
@@ -47,19 +51,19 @@ const Home = () => {
       <section className="hero-section">
         <div className="hero-content">
           <h1 className="hero-title">
-            Affordable Solar Panel Installation for Rural & Urban India
+            {t(language, 'home.heroTitle')}
           </h1>
           <p className="hero-subtitle">
-            Save electricity bills with clean, reliable solar energy. Serving Gorakhpur and surrounding areas with certified installation and maintenance.
+            {t(language, 'home.heroSubtitle')}
           </p>
           <div className="hero-buttons">
             <Link to="/contact" className="btn-primary">
               <Zap size={20} />
-              Get Free Site Survey
+              {t(language, 'home.freeSurvey')}
             </Link>
             <a href="tel:+918591411591" className="btn-secondary">
               <Phone size={20} />
-              Call Now
+              {t(language, 'nav.callNow')}
             </a>
           </div>
         </div>
@@ -68,7 +72,7 @@ const Home = () => {
       {/* Why Choose Us */}
       <section className="section">
         <div className="container">
-          <h2 className="heading-2 text-center mb-3">Why Choose Agri Solar Solution</h2>
+          <h2 className="heading-2 text-center mb-3">{t(language, 'home.whyChooseTitle')}</h2>
           <div className="why-grid">
             {whyChooseUs.map((item, index) => (
               <div key={index} className="why-card">
@@ -83,7 +87,7 @@ const Home = () => {
       {/* Services */}
       <section className="section bg-section">
         <div className="container">
-          <h2 className="heading-2 text-center mb-3">Our Services</h2>
+          <h2 className="heading-2 text-center mb-3">{t(language, 'home.servicesTitle')}</h2>
           <div className="services-grid">
             {services.map((service, index) => (
               <div key={index} className="service-card">
@@ -99,7 +103,7 @@ const Home = () => {
           </div>
           <div className="text-center mt-2">
             <Link to="/services" className="btn-primary">
-              View All Services
+              {t(language, 'home.viewAll')}
             </Link>
           </div>
         </div>
@@ -108,7 +112,7 @@ const Home = () => {
       {/* Benefits */}
       <section className="section">
         <div className="container">
-          <h2 className="heading-2 text-center mb-3">Benefits of Solar Energy</h2>
+          <h2 className="heading-2 text-center mb-3">{t(language, 'home.benefitsTitle')}</h2>
           <div className="benefits-grid">
             {benefits.map((benefit, index) => (
               <div key={index} className="benefit-card">
@@ -125,9 +129,9 @@ const Home = () => {
       <section className="cta-section">
         <div className="container">
           <div className="cta-content">
-            <h2 className="heading-2 text-white">Switch to Solar Today</h2>
+            <h2 className="heading-2 text-white">{t(language, 'home.ctaTitle')}</h2>
             <p className="body-large text-white-80">
-              Join thousands of satisfied customers in Gorakhpur and surrounding areas who have made the switch to clean, affordable solar energy.
+              {t(language, 'home.ctaSubtitle')}
             </p>
             <div className="cta-buttons">
               <a 
@@ -137,11 +141,11 @@ const Home = () => {
                 className="btn-primary"
               >
                 <MessageCircle size={20} />
-                WhatsApp Us
+                {t(language, 'home.whatsappUs')}
               </a>
               <a href="tel:+918591411591" className="btn-secondary btn-secondary-white">
                 <Phone size={20} />
-                Call: 8591411591
+                {t(language, 'home.call')}: 8591411591
               </a>
             </div>
           </div>
