@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import { Building2, Home, Tractor } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
+import { t } from '../translations';
 import './Projects.css';
 
 const Projects = () => {
+  const { language } = useLanguage();
   const [activeFilter, setActiveFilter] = useState('all');
 
   const projects = [
@@ -81,10 +84,10 @@ const Projects = () => {
   ];
 
   const filters = [
-    { id: 'all', label: 'All Projects', icon: null },
-    { id: 'residential', label: 'Residential', icon: <Home size={18} /> },
-    { id: 'commercial', label: 'Commercial', icon: <Building2 size={18} /> },
-    { id: 'rural', label: 'Rural', icon: <Tractor size={18} /> }
+    { id: 'all', label: t(language, 'projects.allProjects'), icon: null },
+    { id: 'residential', label: t(language, 'projects.residential'), icon: <Home size={18} /> },
+    { id: 'commercial', label: t(language, 'projects.commercial'), icon: <Building2 size={18} /> },
+    { id: 'rural', label: t(language, 'projects.rural'), icon: <Tractor size={18} /> }
   ];
 
   const filteredProjects = activeFilter === 'all' 
@@ -96,9 +99,9 @@ const Projects = () => {
       {/* Hero Section */}
       <section className="projects-hero">
         <div className="container">
-          <h1 className="heading-1">Our Projects</h1>
+          <h1 className="heading-1">{t(language, 'projects.title')}</h1>
           <p className="body-large">
-            Explore our successful solar installations across Gorakhpur and surrounding areas
+            {t(language, 'projects.subtitle')}
           </p>
         </div>
       </section>
@@ -126,7 +129,7 @@ const Projects = () => {
                 <div className="project-image">
                   <img src={project.image} alt={project.title} />
                   <div className="project-overlay">
-                    <span className="project-category">{project.category}</span>
+                    <span className="project-category">{t(language, `projects.${project.category}`)}</span>
                   </div>
                 </div>
                 <div className="project-info">
@@ -142,7 +145,7 @@ const Projects = () => {
 
           {filteredProjects.length === 0 && (
             <div className="no-projects">
-              <p className="body-large">No projects found in this category.</p>
+              <p className="body-large">{t(language, 'projects.noProjects')}</p>
             </div>
           )}
         </div>

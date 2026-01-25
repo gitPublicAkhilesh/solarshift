@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import { Phone, Mail, MapPin, MessageCircle, CheckCircle } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
+import { t } from '../translations';
 import './Contact.css';
 
 const Contact = () => {
+  const { language } = useLanguage();
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
@@ -53,9 +56,9 @@ const Contact = () => {
       {/* Hero Section */}
       <section className="contact-hero">
         <div className="container">
-          <h1 className="heading-1">Contact Us</h1>
+          <h1 className="heading-1">{t(language, 'contact.title')}</h1>
           <p className="body-large">
-            Get in touch for a free site survey and customized solar solution
+            {t(language, 'contact.subtitle')}
           </p>
         </div>
       </section>
@@ -66,9 +69,9 @@ const Contact = () => {
           <div className="contact-grid">
             {/* Contact Info */}
             <div className="contact-info">
-              <h2 className="heading-2">Get In Touch</h2>
+              <h2 className="heading-2">{t(language, 'contact.getInTouch')}</h2>
               <p className="body-medium">
-                We're here to help you make the switch to solar energy. Reach out to us through any of these channels.
+                {t(language, 'contact.intro')}
               </p>
 
               <div className="contact-methods">
@@ -77,7 +80,7 @@ const Contact = () => {
                     <Phone size={24} />
                   </div>
                   <div className="method-content">
-                    <h4 className="body-small">Phone</h4>
+                    <h4 className="body-small">{t(language, 'contact.phone')}</h4>
                     <p className="body-medium">+91 8591411591</p>
                   </div>
                 </a>
@@ -87,8 +90,8 @@ const Contact = () => {
                     <MessageCircle size={24} />
                   </div>
                   <div className="method-content">
-                    <h4 className="body-small">WhatsApp</h4>
-                    <p className="body-medium">Chat with us</p>
+                    <h4 className="body-small">{t(language, 'contact.whatsapp')}</h4>
+                    <p className="body-medium">{t(language, 'contact.chatWithUs')}</p>
                   </div>
                 </a>
 
@@ -97,7 +100,7 @@ const Contact = () => {
                     <Mail size={24} />
                   </div>
                   <div className="method-content">
-                    <h4 className="body-small">Email</h4>
+                    <h4 className="body-small">{t(language, 'contact.email')}</h4>
                     <p className="body-medium">agrisolarsolution.in@gmail.com</p>
                   </div>
                 </a>
@@ -107,40 +110,40 @@ const Contact = () => {
                     <MapPin size={24} />
                   </div>
                   <div className="method-content">
-                    <h4 className="body-small">Address</h4>
-                    <p className="body-medium">Police Chowki Jharna Tola, Nena Thapa Road, Near Jai Mata Di Marriage Hall, Gorakhpur, Uttar Pradesh - 273008</p>
+                    <h4 className="body-small">{t(language, 'contact.address')}</h4>
+                    <p className="body-medium">{t(language, 'contact.addressFull')}</p>
                   </div>
                 </div>
               </div>
 
               <div className="service-area-info">
-                <h3 className="heading-3">Service Area</h3>
+                <h3 className="heading-3">{t(language, 'contact.serviceArea')}</h3>
                 <p className="body-medium">
-                  We serve Gorakhpur city and all areas within a 50KM radius, including rural villages and nearby towns.
+                  {t(language, 'contact.serviceAreaDesc')}
                 </p>
               </div>
             </div>
 
             {/* Contact Form */}
             <div className="contact-form-container">
-              <h2 className="heading-2">Send Us a Message</h2>
+              <h2 className="heading-2">{t(language, 'contact.sendMessage')}</h2>
               <p className="body-medium mb-2">
-                Fill out the form below and we'll get back to you within 24 hours.
+                {t(language, 'contact.formIntro')}
               </p>
 
               {isSubmitted && (
                 <div className="success-message">
                   <CheckCircle size={24} />
                   <div>
-                    <h4 className="body-medium">Thank you for your inquiry!</h4>
-                    <p className="body-small">We'll contact you soon to discuss your solar needs.</p>
+                    <h4 className="body-medium">{t(language, 'contact.thankYou')}</h4>
+                    <p className="body-small">{t(language, 'contact.contactSoon')}</p>
                   </div>
                 </div>
               )}
 
               <form onSubmit={handleSubmit} className="contact-form">
                 <div className="form-group">
-                  <label htmlFor="name" className="form-label">Name *</label>
+                  <label htmlFor="name" className="form-label">{t(language, 'contact.name')} *</label>
                   <input
                     type="text"
                     id="name"
@@ -149,12 +152,12 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     className="form-input"
-                    placeholder="Your full name"
+                    placeholder={t(language, 'contact.namePlaceholder')}
                   />
                 </div>
 
                 <div className="form-group">
-                  <label htmlFor="phone" className="form-label">Phone Number *</label>
+                  <label htmlFor="phone" className="form-label">{t(language, 'contact.phoneNumber')} *</label>
                   <input
                     type="tel"
                     id="phone"
@@ -163,14 +166,14 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     className="form-input"
-                    placeholder="Your contact number"
+                    placeholder={t(language, 'contact.phonePlaceholder')}
                     pattern="[0-9]{10}"
                     title="Please enter a valid 10-digit phone number"
                   />
                 </div>
 
                 <div className="form-group">
-                  <label htmlFor="city" className="form-label">City/Village *</label>
+                  <label htmlFor="city" className="form-label">{t(language, 'contact.cityVillage')} *</label>
                   <input
                     type="text"
                     id="city"
@@ -179,12 +182,12 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     className="form-input"
-                    placeholder="Your location"
+                    placeholder={t(language, 'contact.cityPlaceholder')}
                   />
                 </div>
 
                 <div className="form-group">
-                  <label htmlFor="message" className="form-label">Message</label>
+                  <label htmlFor="message" className="form-label">{t(language, 'contact.message')}</label>
                   <textarea
                     id="message"
                     name="message"
@@ -192,12 +195,12 @@ const Contact = () => {
                     onChange={handleChange}
                     rows="4"
                     className="form-textarea"
-                    placeholder="Tell us about your solar requirements..."
+                    placeholder={t(language, 'contact.messagePlaceholder')}
                   />
                 </div>
 
                 <button type="submit" className="btn-primary form-submit">
-                  Submit Inquiry
+                  {t(language, 'contact.submitInquiry')}
                 </button>
               </form>
             </div>
@@ -208,7 +211,7 @@ const Contact = () => {
       {/* Map Section */}
       <section className="section bg-section">
         <div className="container">
-          <h2 className="heading-2 text-center mb-3">Find Us</h2>
+          <h2 className="heading-2 text-center mb-3">{t(language, 'contact.findUs')}</h2>
           <div className="map-container">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3559.5823456789!2d83.4212083!3d26.7567787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjbCsDQ1JzI0LjQiTiA4M8KwMjUnMTYuNCJF!5e0!3m2!1sen!2sin!4v1234567890"
@@ -222,7 +225,7 @@ const Contact = () => {
             />
             <div className="map-address-note">
               <p className="body-small">
-                <strong>Address:</strong> Police Chowki Jharna Tola, Nena Thapa Road, Near Jai Mata Di Marriage Hall, Gorakhpur, UP - 273008
+                <strong>{t(language, 'contact.address')}:</strong> {t(language, 'contact.addressFull')}
               </p>
             </div>
           </div>

@@ -1,59 +1,63 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Home, Building2, Tractor, Wrench, CheckCircle, ArrowRight } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
+import { t } from '../translations';
 import './Services.css';
 
 const Services = () => {
+  const { language } = useLanguage();
+
   const services = [
     {
       icon: <Home size={40} />,
-      title: 'Residential Solar',
-      description: 'Transform your home with rooftop solar panels designed for Indian households',
+      title: t(language, 'services.residential'),
+      description: t(language, 'services.residentialDesc'),
       features: [
-        'Rooftop solar panel installation',
-        'On-grid and hybrid systems',
-        'Ideal for homes and apartments',
-        'Government subsidy assistance',
-        'Net metering setup'
+        t(language, 'services.rooftopInstall'),
+        t(language, 'services.onGrid'),
+        t(language, 'services.idealHomes'),
+        t(language, 'services.subsidyAssist'),
+        t(language, 'services.netMetering')
       ],
       image: 'https://images.unsplash.com/photo-1691421740425-48ff22b6d442?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTN8MHwxfHNlYXJjaHwyfHxyb29mdG9wJTIwc29sYXJ8ZW58MHx8fHwxNzY5Mjc2MDg1fDA&ixlib=rb-4.1.0&q=85'
     },
     {
       icon: <Building2 size={40} />,
-      title: 'Commercial Solar',
-      description: 'High-capacity solar solutions for businesses, offices, and institutions',
+      title: t(language, 'services.commercial'),
+      description: t(language, 'services.commercialDesc'),
       features: [
-        'Large-scale installations',
-        'Perfect for offices, factories, schools',
-        'Significant cost savings',
-        'Custom capacity design',
-        'Professional monitoring systems'
+        t(language, 'services.largeScale'),
+        t(language, 'services.perfectFor'),
+        t(language, 'services.costSavings'),
+        t(language, 'services.customDesign'),
+        t(language, 'services.monitoring')
       ],
       image: 'https://images.unsplash.com/photo-1617269778723-73a40cf299bd?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTN8MHwxfHNlYXJjaHwzfHxyb29mdG9wJTIwc29sYXJ8ZW58MHx8fHwxNzY5Mjc2MDg1fDA&ixlib=rb-4.1.0&q=85'
     },
     {
       icon: <Tractor size={40} />,
-      title: 'Rural Solar Solutions',
-      description: 'Empowering villages and farms with reliable, off-grid solar power',
+      title: t(language, 'services.rural'),
+      description: t(language, 'services.ruralDesc'),
       features: [
-        'Off-grid solar systems',
-        'Solar water pumps for agriculture',
-        'Village home installations',
-        'No dependency on grid power',
-        'Special rural packages'
+        t(language, 'services.offGrid'),
+        t(language, 'services.waterPumps'),
+        t(language, 'services.villageHomes'),
+        t(language, 'services.noDependency'),
+        t(language, 'services.ruralPackages')
       ],
       image: 'https://images.unsplash.com/photo-1509391366360-2e959784a276?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NjZ8MHwxfHNlYXJjaHwyfHxzb2xhciUyMHBhbmVsc3xlbnwwfHx8fDE3NjkyNzYwNzl8MA&ixlib=rb-4.1.0&q=85'
     },
     {
       icon: <Wrench size={40} />,
-      title: 'Solar Maintenance & AMC',
-      description: 'Keep your solar system running at peak performance',
+      title: t(language, 'services.maintenance'),
+      description: t(language, 'services.maintenanceDesc'),
       features: [
-        'Annual maintenance contracts',
-        'Regular panel cleaning',
-        'Inverter checkups and repairs',
-        'Performance monitoring',
-        '24/7 support hotline'
+        t(language, 'services.amc'),
+        t(language, 'services.panelCleaning'),
+        t(language, 'services.inverterCheckup'),
+        t(language, 'services.performance'),
+        t(language, 'services.support247')
       ],
       image: 'https://images.pexels.com/photos/8853502/pexels-photo-8853502.jpeg'
     }
@@ -64,9 +68,9 @@ const Services = () => {
       {/* Hero Section */}
       <section className="services-hero">
         <div className="container">
-          <h1 className="heading-1">Our Solar Services</h1>
+          <h1 className="heading-1">{t(language, 'services.title')}</h1>
           <p className="body-large">
-            Comprehensive solar solutions for homes, businesses, and farms across Gorakhpur and surrounding areas.
+            {t(language, 'services.subtitle')}
           </p>
         </div>
       </section>
@@ -101,13 +105,13 @@ const Services = () => {
       <section className="section bg-section">
         <div className="container">
           <div className="services-cta">
-            <h2 className="heading-2 text-center">Ready to Go Solar?</h2>
+            <h2 className="heading-2 text-center">{t(language, 'services.readyTitle')}</h2>
             <p className="body-large text-center">
-              Get a free site survey and customized solar solution for your needs
+              {t(language, 'services.readySubtitle')}
             </p>
             <div className="cta-buttons">
               <Link to="/contact" className="btn-primary">
-                Get Free Consultation
+                {t(language, 'services.freeConsult')}
                 <ArrowRight size={20} />
               </Link>
             </div>

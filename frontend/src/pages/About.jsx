@@ -1,18 +1,22 @@
 import React from 'react';
 import { Target, Eye, Award, Users, Zap, Heart } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
+import { t } from '../translations';
 import './About.css';
 
 const About = () => {
+  const { language } = useLanguage();
+
   const mission = [
-    { icon: <Target size={28} />, title: 'Our Mission', text: 'Making affordable solar energy accessible to every home, farm, and business in rural and urban India' },
-    { icon: <Eye size={28} />, title: 'Our Vision', text: 'Achieving energy independence for India through widespread adoption of clean, renewable solar power' }
+    { icon: <Target size={28} />, title: t(language, 'about.mission'), text: t(language, 'about.missionText') },
+    { icon: <Eye size={28} />, title: t(language, 'about.vision'), text: t(language, 'about.visionText') }
   ];
 
   const values = [
-    { icon: <Award size={28} />, title: 'Quality', description: 'Premium solar panels with 25+ years warranty' },
-    { icon: <Users size={28} />, title: 'Community Focus', description: 'Empowering villages and cities with clean energy' },
-    { icon: <Zap size={28} />, title: 'Expertise', description: 'Certified professionals with years of experience' },
-    { icon: <Heart size={28} />, title: 'Customer Care', description: 'Dedicated support throughout your solar journey' }
+    { icon: <Award size={28} />, title: t(language, 'about.quality'), description: t(language, 'about.qualityDesc') },
+    { icon: <Users size={28} />, title: t(language, 'about.community'), description: t(language, 'about.communityDesc') },
+    { icon: <Zap size={28} />, title: t(language, 'about.expertise'), description: t(language, 'about.expertiseDesc') },
+    { icon: <Heart size={28} />, title: t(language, 'about.customerCare'), description: t(language, 'about.customerCareDesc') }
   ];
 
   return (
@@ -20,9 +24,9 @@ const About = () => {
       {/* Hero Section */}
       <section className="about-hero">
         <div className="container">
-          <h1 className="heading-1">About Agri Solar Solution</h1>
+          <h1 className="heading-1">{t(language, 'about.title')}</h1>
           <p className="body-large">
-            Leading solar panel installation company serving Gorakhpur and surrounding areas with a commitment to clean, affordable energy for all.
+            {t(language, 'about.subtitle')}
           </p>
         </div>
       </section>
@@ -38,15 +42,15 @@ const About = () => {
               />
             </div>
             <div className="story-text">
-              <h2 className="heading-2">Our Story</h2>
+              <h2 className="heading-2">{t(language, 'about.storyTitle')}</h2>
               <p className="body-medium">
-                Agri Solar Solution was founded with a clear purpose: to bring the benefits of solar energy to every corner of India, from bustling urban centers to remote rural villages.
+                {t(language, 'about.story1')}
               </p>
               <p className="body-medium">
-                We understand the unique challenges faced by communities in Uttar Pradesh and surrounding regions. High electricity bills, frequent power cuts, and limited access to reliable energy sources inspired us to create solutions that work for everyone.
+                {t(language, 'about.story2')}
               </p>
               <p className="body-medium">
-                With years of experience in solar installation and a deep commitment to customer satisfaction, we've helped hundreds of families, farmers, and businesses transition to clean, cost-effective solar power.
+                {t(language, 'about.story3')}
               </p>
             </div>
           </div>
@@ -71,25 +75,25 @@ const About = () => {
       {/* Why Rural Focus */}
       <section className="section">
         <div className="container">
-          <h2 className="heading-2 text-center mb-3">Why We Focus on Rural Areas</h2>
+          <h2 className="heading-2 text-center mb-3">{t(language, 'about.whyRuralTitle')}</h2>
           <div className="rural-content">
             <div className="rural-text">
               <div className="rural-point">
-                <h3 className="heading-3">Power Access</h3>
+                <h3 className="heading-3">{t(language, 'about.powerAccess')}</h3>
                 <p className="body-medium">
-                  Many rural areas face irregular power supply. Solar provides reliable, independent energy access 24/7.
+                  {t(language, 'about.powerAccessDesc')}
                 </p>
               </div>
               <div className="rural-point">
-                <h3 className="heading-3">Farmer Empowerment</h3>
+                <h3 className="heading-3">{t(language, 'about.farmerEmp')}</h3>
                 <p className="body-medium">
-                  Solar water pumps and farm equipment powered by solar help increase agricultural productivity and reduce costs.
+                  {t(language, 'about.farmerEmpDesc')}
                 </p>
               </div>
               <div className="rural-point">
-                <h3 className="heading-3">Government Support</h3>
+                <h3 className="heading-3">{t(language, 'about.govSupport')}</h3>
                 <p className="body-medium">
-                  We help rural communities access government subsidies and schemes designed to promote renewable energy adoption.
+                  {t(language, 'about.govSupportDesc')}
                 </p>
               </div>
             </div>
@@ -106,7 +110,7 @@ const About = () => {
       {/* Values */}
       <section className="section bg-section">
         <div className="container">
-          <h2 className="heading-2 text-center mb-3">Our Core Values</h2>
+          <h2 className="heading-2 text-center mb-3">{t(language, 'about.valuesTitle')}</h2>
           <div className="values-grid">
             {values.map((value, index) => (
               <div key={index} className="value-card">
