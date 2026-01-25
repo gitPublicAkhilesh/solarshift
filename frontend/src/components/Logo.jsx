@@ -6,7 +6,7 @@ const Logo = ({ size = 'medium', showText = false }) => {
   return (
     <Link to="/" className={`logo-container logo-${size}`}>
       <img 
-        src="/agri-solar-logo.png" 
+        src="/agri-solar-logo.jpg" 
         alt="Agri Solar Solution" 
         className="logo-image"
       />
