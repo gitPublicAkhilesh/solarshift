@@ -24,15 +24,35 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     
-    // Save to localStorage
-    const existingLeads = JSON.parse(localStorage.getItem('solarLeads') || '[]');
-    const newLead = {
-      ...formData,
-      timestamp: new Date().toISOString(),
-      id: Date.now()
-    };
-    existingLeads.push(newLead);
-    localStorage.setItem('solarLeads', JSON.stringify(existingLeads));
+    // Create WhatsApp message based on current language
+    let message = '';
+    
+    if (language === 'hi') {
+      // Hindi message format
+      message = `नमस्ते! मैं सोलर पैनल स्थापना में रुचि रखता/रखती हूं।\n\n` +
+                `📝 विवरण:\n` +
+                `नाम: ${formData.name}\n` +
+                `फोन: ${formData.phone}\n` +
+                `शहर/गांव: ${formData.city}\n` +
+                `${formData.message ? `संदेश: ${formData.message}\n` : ''}\n` +
+                `कृपया मुझसे संपर्क करें।`;
+    } else {
+      // English message format
+      message = `Hello! I am interested in solar panel installation.\n\n` +
+                `📝 Details:\n` +
+                `Name: ${formData.name}\n` +
+                `Phone: ${formData.phone}\n` +
+                `City/Village: ${formData.city}\n` +
+                `${formData.message ? `Message: ${formData.message}\n` : ''}\n` +
+                `Please contact me.`;
+    }
+    
+    // Encode message for WhatsApp URL
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappURL = `https://wa.me/918591411591?text=${encodedMessage}`;
+    
+    // Open WhatsApp in new tab
+    window.open(whatsappURL, '_blank');
     
     // Show success message
     setIsSubmitted(true);
