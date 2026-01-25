@@ -1,20 +1,24 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Phone } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
+import { t } from '../translations';
 import Logo from './Logo';
+import LanguageSwitcher from './LanguageSwitcher';
 import './Navbar.css';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
+  const { language } = useLanguage();
 
   const navLinks = [
-    { path: '/', label: 'Home' },
-    { path: '/about', label: 'About Us' },
-    { path: '/services', label: 'Services' },
-    { path: '/subsidy', label: 'Subsidy' },
-    { path: '/projects', label: 'Projects' },
-    { path: '/contact', label: 'Contact' }
+    { path: '/', label: t(language, 'nav.home') },
+    { path: '/about', label: t(language, 'nav.about') },
+    { path: '/services', label: t(language, 'nav.services') },
+    { path: '/subsidy', label: t(language, 'nav.subsidy') },
+    { path: '/projects', label: t(language, 'nav.projects') },
+    { path: '/contact', label: t(language, 'nav.contact') }
   ];
 
   const isActive = (path) => location.pathname === path;
@@ -22,7 +26,7 @@ const Navbar = () => {
   return (
     <nav className="nav-header">
       <div className="nav-content">
-        <Logo size="medium" showText={true} />
+        <Logo size="medium" showText={false} />
 
         {/* Desktop Navigation */}
         <div className="nav-links-desktop">
@@ -37,11 +41,14 @@ const Navbar = () => {
           ))}
         </div>
 
-        {/* Call Button */}
-        <a href="tel:+918591411591" className="btn-primary nav-cta-desktop">
-          <Phone size={18} />
-          Call Now
-        </a>
+        {/* Desktop Actions */}
+        <div className="nav-actions-desktop">
+          <LanguageSwitcher />
+          <a href="tel:+918591411591" className="btn-primary nav-cta-desktop">
+            <Phone size={18} />
+            {t(language, 'nav.callNow')}
+          </a>
+        </div>
 
         {/* Mobile Menu Button */}
         <button
@@ -66,10 +73,13 @@ const Navbar = () => {
               {link.label}
             </Link>
           ))}
-          <a href="tel:+918591411591" className="btn-primary" style={{ width: '100%' }}>
-            <Phone size={18} />
-            Call Now
-          </a>
+          <div className="mobile-actions">
+            <LanguageSwitcher />
+            <a href="tel:+918591411591" className="btn-primary" style={{ width: '100%' }}>
+              <Phone size={18} />
+              {t(language, 'nav.callNow')}
+            </a>
+          </div>
         </div>
       )}
     </nav>
