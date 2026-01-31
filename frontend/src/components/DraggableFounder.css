@@ -1,0 +1,68 @@
+.draggable-founder {
+  position: fixed;
+  z-index: 999;
+  cursor: move;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  transition: transform 0.2s ease;
+}
+
+.draggable-founder.dragging {
+  cursor: grabbing;
+  opacity: 0.9;
+}
+
+.draggable-founder:active {
+  cursor: grabbing;
+}
+
+.founder-photo-wrapper {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid var(--accent-primary);
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15), 0 0 0 4px rgba(143, 236, 120, 0.2);
+  background: white;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.draggable-founder:hover .founder-photo-wrapper {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2), 0 0 0 4px rgba(143, 236, 120, 0.3);
+}
+
+.founder-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.founder-label {
+  background: white;
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-family: system-ui, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  white-space: nowrap;
+  pointer-events: none;
+  border: 1px solid var(--border-light);
+}
+
+@media (max-width: 767px) {
+  .founder-photo-wrapper {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .founder-label {
+    font-size: 0.75rem;
+    padding: 6px 10px;
+  }
+}

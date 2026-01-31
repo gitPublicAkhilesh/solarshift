@@ -50,21 +50,34 @@ const Home = () => {
       {/* Hero Section */}
       <section className="hero-section">
         <div className="hero-content">
-          <h1 className="hero-title">
-            {t(language, 'home.heroTitle')}
-          </h1>
-          <p className="hero-subtitle">
-            {t(language, 'home.heroSubtitle')}
-          </p>
-          <div className="hero-buttons">
-            <Link to="/contact" className="btn-primary">
-              <Zap size={20} />
-              {t(language, 'home.freeSurvey')}
-            </Link>
-            <a href="tel:+918591411591" className="btn-secondary">
-              <Phone size={20} />
-              {t(language, 'nav.callNow')}
-            </a>
+          <div className="hero-text">
+            <h1 className="hero-title">
+              {t(language, 'home.heroTitle')}
+            </h1>
+            <p className="hero-subtitle">
+              {t(language, 'home.heroSubtitle')}
+            </p>
+            <div className="hero-buttons">
+              <Link to="/contact" className="btn-primary">
+                <Zap size={20} />
+                {t(language, 'home.freeSurvey')}
+              </Link>
+              <a href="tel:+918591411591" className="btn-secondary">
+                <Phone size={20} />
+                {t(language, 'nav.callNow')}
+              </a>
+            </div>
+          </div>
+          <div className="hero-founder">
+            <div className="hero-founder-image">
+              <img 
+                src="/founder-photo.png" 
+                alt="Founder - Agri Solar Solution" 
+              />
+            </div>
+            <p className="hero-founder-caption">
+              {language === 'hi' ? 'संस्थापक – अग्रि सोलर सॉल्यूशन' : 'Founder – Agri Solar Solution'}
+            </p>
           </div>
         </div>
       </section>
