@@ -1,0 +1,73 @@
+.draggable-founder {
+  position: fixed;
+  z-index: 999;
+  cursor: move;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: transform 0.2s ease;
+  background: white;
+  padding: 8px 20px 8px 8px;
+  border-radius: 50px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.draggable-founder.dragging {
+  cursor: grabbing;
+  opacity: 0.95;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.draggable-founder:active {
+  cursor: grabbing;
+}
+
+.founder-photo-wrapper {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 3px solid var(--accent-primary);
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(143, 236, 120, 0.3);
+  background: white;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  flex-shrink: 0;
+}
+
+.draggable-founder:hover .founder-photo-wrapper {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(143, 236, 120, 0.4);
+}
+
+.founder-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.founder-label {
+  font-family: system-ui, sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+@media (max-width: 767px) {
+  .draggable-founder {
+    padding: 6px 16px 6px 6px;
+    gap: 0.75rem;
+  }
+  
+  .founder-photo-wrapper {
+    width: 56px;
+    height: 56px;
+  }
+  
+  .founder-label {
+    font-size: 0.875rem;
+  }
+}
